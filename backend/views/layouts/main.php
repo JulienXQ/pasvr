@@ -41,6 +41,7 @@ AppAsset::register($this);
         $menuItems[] = ['label' => '<i class="icon-signin"></i> Login', 'url' => ['/site/login']];
     } else {
         $menuItems[] = ['label' => '<i class="icon-th-list"></i> Post', 'url' => ['/post/index']];
+        $menuItems[] = ['label' => '<i class="icon-comments"></i> Comment', 'url' => ['/comment/index']];
         $menuItems[] = [
             'label' => '<i class="icon-user"></i> '.Yii::$app->user->identity->username,
             'items' => [
