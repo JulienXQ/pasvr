@@ -57,6 +57,9 @@ tests                    contains various tests for the advanced application
 ```
 ===============================
 use the demo.sql as database demo
+
 backend
+
 	user		administrator
+	
 	password 	administrator
