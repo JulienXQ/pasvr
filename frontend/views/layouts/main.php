@@ -39,17 +39,17 @@ AppAsset::register($this);
         ['label' => '<i class="icon-barcode"></i> '.Yii::t('common', 'About'), 'url' => ['/site/about']],
         ['label' => '<i class="icon-edit"></i> '.Yii::t('common', 'Contact'), 'url' => ['/site/contact']],
     ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => '<i class="icon-plus-sign"></i> '.Yii::t('common', 'Signup'), 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => '<i class="icon-signin"></i> '.Yii::t('common', 'Login'), 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = [
-            'label' => '<i class="icon-user"></i> '.Yii::$app->user->identity->username,
-            'items' => [
-               [ 'label' => '<i class="icon-signout"></i> '.Yii::t('common', 'Logout'), 'url' => ['/site/logout'], 'linkOptions' => ['data-method' => 'post'],],
-            ],
-        ];
-    }
+//    if (Yii::$app->user->isGuest) {
+//        $menuItems[] = ['label' => '<i class="icon-plus-sign"></i> '.Yii::t('common', 'Signup'), 'url' => ['/site/signup']];
+//        $menuItems[] = ['label' => '<i class="icon-signin"></i> '.Yii::t('common', 'Login'), 'url' => ['/site/login']];
+//    } else {
+//        $menuItems[] = [
+//            'label' => '<i class="icon-user"></i> '.Yii::$app->user->identity->username,
+//            'items' => [
+//               [ 'label' => '<i class="icon-signout"></i> '.Yii::t('common', 'Logout'), 'url' => ['/site/logout'], 'linkOptions' => ['data-method' => 'post'],],
+//            ],
+//        ];
+//    }
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'encodeLabels' => false,
