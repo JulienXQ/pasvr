@@ -233,7 +233,9 @@ class SiteController extends Controller
     public function actionArticle($article){
         $query = GetPost::find()->where(['id' => $article])->asArray()->one();
         $comments = Comment::find()->where(['p_id'=>$article])->asArray()->all();
-
+        if($query == ''){
+            $this->redirect(['index']);
+        }
         $model = new Comment();
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['article','article'=>$article]);
